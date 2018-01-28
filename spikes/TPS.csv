@@ -1,9 +1,9 @@
 Task,Time Est (min),Risk,Who ,Time Spent,% Complete,Code Review
 Set up Git repo,30,1,All,0.25,100,Naw
 Choose GCC flags,30,1,Matt/Jonah,,,
-Writing stories,30,1,John,,,
+Writing stories,30,1,John,0.5,100,
 Research IEEE,60,3,All,,,
-Prototype program,60,2,John/Danny,,,
+Prototype program,60,2,John/Danny,1,100,
 Float spikes,60,3,All,,,
 pendatic vs Wpendantic,15,0,Matt,,,
 C programming standard,15,0,Jonah,,,
