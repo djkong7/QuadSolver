@@ -1,10 +1,10 @@
 Task,Time Est (min),Risk,Who ,Time Spent,% Complete,Code Review
-Set up Git repo,30,1,All,0.25,100,Naw
+Set up Git repo,30,1,All,0.25,100,No
 Choose GCC flags,30,1,Matt/Jonah,0.25,100,Yes
-Writing stories,30,1,John,0.5,100,
+Writing stories,30,1,John,0.5,100,No
 Research IEEE,60,3,All,0.1,25,No
-Prototype program,60,2,John/Danny,1,100,
+Prototype program,60,2,John/Danny,1,100,Yes
 Float spikes,60,3,All,0.25,50,No
-pedantic vs Wpedantic,15,1,Matt,0.25,100%,Yes
-C programming standard,15,2,Jonah,0.5,75%,No
-Licensing ,15,2,Danny,,,
+pedantic vs Wpedantic,15,1,Matt,0.25,100,Yes
+C programming standard,15,2,Jonah,0.5,75,No
+Licensing ,15,2,Danny,0.25,50,No
