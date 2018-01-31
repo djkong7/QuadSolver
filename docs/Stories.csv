@@ -5,3 +5,6 @@ Story,Time Estimate,Risk (1-5),Total Time,% Complete
 The engineers will receive real roots only.,0min,1,0,0
 The engineers will be told if double or single solution root.,30min,1,0,0
 The engineers will input and receive IEEE single precision floating point numbers.,1hr,2,0,0
+,,,,
+,,,,
+Give a warning if they give too many decimal places,,,,

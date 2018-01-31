@@ -13,5 +13,6 @@ What are legal inputs
 	1.00134e7
 
 What are not legal inputs
+	1.8e420
 	
 
