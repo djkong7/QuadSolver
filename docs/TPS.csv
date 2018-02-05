@@ -1,10 +1,19 @@
-Task,Time Est (min),Risk,Who ,Time Spent,% Complete,Code Review
-Set up Git repo,30,1,All,0.25,100,No
-Choose GCC flags,30,1,Matt/Jonah,0.25,100,Yes
-Writing stories,30,1,John,0.5,100,No
-Research IEEE,60,3,All,0.1,25,No
-Prototype program,60,2,John/Danny,1,100,Yes
-Float spikes,60,3,All,0.25,50,No
-pedantic vs Wpedantic,15,1,Matt,0.25,100,Yes
-C programming standard,15,2,Jonah,0.5,75,No
-Licensing ,15,2,Danny,0.25,50,No
+Task,Time Est (Hrs),Risk,Who ,Time Spent (Hrs),% Complete,Code Review
+Week 1:,,,,,,
+Set up Git repo,0.5,1,All,0.25,100,No
+Choose GCC flags,0.5,1,Matt/Jonah,0.25,100,Yes
+Writing stories,0.5,1,John,0.5,100,No
+Research IEEE,1,3,All,0.1,25,No
+Prototype program,1,2,John/Danny,1,100,Yes
+Float spikes,1,3,All,0.25,50,No
+pedantic vs Wpedantic,0.25,1,Matt,0.25,100,Yes
+C programming standard,0.25,2,Jonah,0.5,75,No
+Licensing ,0.25,2,Danny,0.25,50,No
+,,,,,,
+Week 2:,,,,,,
+Research IEEE (cont),1,3,All,0.75,100,No
+Float spikes (cont),1,3,All,0.75,100,No
+C programming standard (cont),0.25,2,Jonah,0.5,75,No
+Licensing (cont),0.25,2,Danny,0.25,50,No
+Re-structure src folder,0.5,1,Jonah,0.5,100,No
+Incorporate float spikes into previous test programs,0.5,2,John,0.5,100,Not yet
