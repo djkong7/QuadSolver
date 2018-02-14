@@ -1,0 +1,1 @@
+int wline(char *line);
