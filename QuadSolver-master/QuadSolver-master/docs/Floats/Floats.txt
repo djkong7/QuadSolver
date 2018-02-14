@@ -1,3 +1,0 @@
-Explanation of how floating point numbers work: https://introcs.cs.princeton.edu/java/91float/
-
-Denormalized numbers: https://stackoverflow.com/questions/20065406/whats-the-largest-denormalized-and-normalized-number64bit-iee-754-1985
