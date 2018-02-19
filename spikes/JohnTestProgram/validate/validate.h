@@ -1,0 +1,1 @@
+int validate(char* line, int n, float* a, float* b, float* c);
