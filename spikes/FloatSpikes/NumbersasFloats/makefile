@@ -2,7 +2,7 @@ CC = gcc
 CFlags = -Wall -pedantic -std=c11
 
 prog: float.c
-	${CC} ${CFlags} -o float float.c
+	${CC} ${CFlags} -o float float.c -lm
 
 all:
 	${CC} ${CFlags} -o float float.c
