@@ -1,0 +1,32 @@
+Docs
+	- C programming standards
+	- License (Client agreement)/ Ownership
+	- NDA
+	- TPS and Stories
+	- Make Standards
+	- Version Control standards
+	- IEEE - FP docs
+	- Maintenace Docs
+		- Install
+		- Logging
+	- Security Docs
+	- Testing
+		- C Unit Testing
+		- Coverage
+		- System Testing
+		- Usability Testing
+	- Unit Testing standards
+
+Spikes
+	- IEEEFP
+	- simple-qs
+	- make
+	- cunit
+	- relative/absolute error
+	- c-io
+
+Source
+
+Build
+
+Distribution
