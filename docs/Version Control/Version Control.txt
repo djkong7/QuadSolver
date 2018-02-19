@@ -1,0 +1,4 @@
+Version Control
+
+A new version will only be released when it has passed all previous unit tests, system tests, and usability tests.
+The new version must also pass the new tests made for that version.
