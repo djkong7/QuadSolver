@@ -1,0 +1,5 @@
+License for use of Quadratic Solver
+
+GPL 2.0
+	Freely distributed and re-distributed with no restrictions
+	Ownership is kept JKK Consulting
