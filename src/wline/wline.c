@@ -1,12 +1,12 @@
-//write line
-
 #include <stdio.h>
 #include <errno.h>
-#include <math.h>
 #include <stdlib.h>
 #include <string.h>
 
 int wline(char* line){
-	printf("%s",line);
-	return 0;
+	if (printf("%s",line) < 0) {
+	    return -2;
+	} else {
+	    return 0;
+        }
 }

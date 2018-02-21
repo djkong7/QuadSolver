@@ -10,12 +10,10 @@
 #include <string.h>
 
 int validate(char* line, int n, float* a, float* b, float* c){
-	while(*line!='\0'){
-		if((*line<48&&*line!=32)||(*line>57&&(*line!=69||*line!=101))){
-			printf("Invalid input. Exiting.\n");
-			return -1;
+	for (int i = 0; line[i] != '\0'; i++) {
+		if ((line[i] < 48 && line[i] != 32) || (line[i] > 57 && (line[i] != 69 || line[i] != 101))) {
+			return -4;
 		}
-		line++;
 	}
 	return 0;
 }
