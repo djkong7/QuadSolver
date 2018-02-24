@@ -3,6 +3,7 @@
 #include <math.h>
 #include <stdlib.h>
 #include <string.h>
+#include "../wline/wline.h"
 
 void foutput(int errorNumber){
 	switch (errorNumber) {
