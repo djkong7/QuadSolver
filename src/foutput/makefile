@@ -1,23 +1,23 @@
 CC = gcc
 CFlags = -Wall -pedantic -std=c11
 
-run: test
-	./test
+run: foutputTest
+	./foutputTest
 
-all: test.o foutput.o
-	${CC} -o test test.o foutput.o
+all: foutputTest.o foutput.o
+	${CC} -o foutputTest foutputTest.o foutput.o
 
-test.o: foutput.h test.c
-	${CC} ${CFlags} -c test.c
+foutputTest.o: foutput.h foutputTest.c
+	${CC} ${CFlags} -c foutputTest.c
 
 foutput.o: foutput.h foutput.c
-	${CC} ${CFlags} -c foutput.c
+	${CC} ${CFlags} -c foutput.c ../wline/wline.c
 
 build: clean foutput.o
 	cp foutput.o ../../build
 
 clean:
-	rm -rf test *.o core
+	rm -rf foutputTest *.o core
 
 deploy:
 	cp foutput.c foutput.h ../../deploy
