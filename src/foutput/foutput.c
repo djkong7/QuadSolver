@@ -7,11 +7,6 @@
 
 void foutput(int errorNumber){
 	switch (errorNumber) {
-		case 0:
-			if (wline("Success.\n") != 0) {
-			    err_sys("Error printing failed!");
-			}
-			break;
 		case -1:
 			if (wline("rline() Failed.\n") != 0) {
 			    err_sys("Error printing failed!");
@@ -39,6 +34,11 @@ void foutput(int errorNumber){
 			exit(1);
 		case -6:
 		  	if (wline("Two complex roots. No result.\n") != 0) {
+			    err_sys("Error printing failed!");
+			}
+			exit(1);
+		case -7:
+			if (wline("Accuracy lost in calculation.\n") != 0) {
 			    err_sys("Error printing failed!");
 			}
 			exit(1);
