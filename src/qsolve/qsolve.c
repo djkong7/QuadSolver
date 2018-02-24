@@ -3,7 +3,7 @@
 #include <math.h>
 #include <stdlib.h>
 #include <string.h>
-
+#include "qsolve.h"
 
 int qsolve(double a, double b, double c, double* x1,  double* x2){
 	if (a == 0) {
@@ -33,9 +33,9 @@ int qsolve(double a, double b, double c, double* x1,  double* x2){
 	}
 
 	if(desc != 0){
-		printf("r1: %.7g\nr2: %.7g\n", r1, r2);
+		printf("\nr1: %.7g\nr2: %.7g\n", r1, r2);
 	} else {
-		printf("r1: %.7g\n", r1);
+		printf("\nr1: %.7g\n", r1);
 	}
 	
 	return 0;
