@@ -13,7 +13,7 @@ test.o: foutput.h test.c
 foutput.o: foutput.h foutput.c
 	${CC} ${CFlags} -c foutput.c
 
-build:
+build: clean foutput.o
 	cp foutput.o ../../build
 
 clean:

@@ -1,2 +1,15 @@
+CC = gcc
+CFlags = -Wall -pedantic -std=c11
+
 all:
-	gcc -Wall -pedantic -std=c99 main/main.c rline/rline.c validate/validate.c qsolve/qsolve.c wline/wline.c foutput/foutput.c -o quadSolver -lm
+	${CC} ${CFlags} main/main.c rline/rline.c validate/validate.c qsolve/qsolve.c wline/wline.c foutput/foutput.c -o quadSolver -lm
+
+build: 
+	(cd rline; make build)
+	(cd foutput; make build)
+	(cd main; make build)
+	(cd qsolve; make build)
+	(cd rline; make build)
+	(cd wline; make build)
+	(cd validate; make build)
+	(cd ../build; make)

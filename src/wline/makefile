@@ -15,6 +15,7 @@ wline.o: wline.h wline.c
 	${CC} ${CFlags} -c wline.c
 
 build:
+	(make clean; make wline.o)
 	cp wline.o ../../build
 
 clean:

@@ -13,7 +13,7 @@ test.o: validate.h test.c
 validate.o: validate.h validate.c
 	${CC} ${CFlags} -c validate.c
 
-build:
+build: clean validate.o
 	cp validate.o ../../build
 
 clean:

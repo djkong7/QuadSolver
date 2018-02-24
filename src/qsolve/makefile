@@ -13,7 +13,7 @@ test.o: qsolve.h test.c
 qsolve.o: qsolve.h qsolve.c
 	${CC} ${CFlags} -c qsolve.c
 
-build:
+build:	clean qsolve.o
 	cp qsolve.o ../../build
 
 clean:

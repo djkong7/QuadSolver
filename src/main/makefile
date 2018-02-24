@@ -7,13 +7,13 @@ run: test
 all: test.o main.o
 	${CC} -o test test.o main.o
 
-main.o: main.h test.c
+test.o: main.h test.c
 	${CC} ${CFlags} -c test.c
 
 main.o: main.h main.c
 	${CC} ${CFlags} -c main.c
 
-build:
+build: clean main.o
 	cp main.o ../../build
 
 clean:

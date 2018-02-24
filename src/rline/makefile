@@ -13,7 +13,7 @@ test.o: rline.h rlineTest.c
 rline.o: rline.h rline.c
 	${CC} ${CFlags} -c rline.c
 
-build:
+build:	clean rline.o
 	cp rline.o ../../build
 
 clean:
