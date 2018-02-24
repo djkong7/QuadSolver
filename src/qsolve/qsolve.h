@@ -1,1 +1,1 @@
-int qsolve(float a, float b, float c, float* x1, float* x2);
+int qsolve(double a, double b, double c, double* x1, double* x2);

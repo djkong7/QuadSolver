@@ -23,7 +23,7 @@ int main(int argc, char** argv){
 			double a,b,c;
 			ret = validate(&input[0], 256, &a, &b, &c);
 			if(ret == 1){
-				float x1, x2;
+				double x1, x2;
 				ret = qsolve(a, b, c, &x1, &x2);
 			} else {
 				//validate failed
