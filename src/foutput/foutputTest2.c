@@ -4,7 +4,7 @@
 #include <string.h>
 #include "foutput.h"
 
-void foutputTest2() {
+int main() {
   char* errorMessages[6] = {"rline() Failed.\n",
 			    "wline() Failed.\n",
 			    "3 input values required.\n",
@@ -18,5 +18,9 @@ void foutputTest2() {
 	if ((strncmp(error, errorMessages[-i - 1], strlen(errorMessages[-i - 1]))) != 0) {
 		printf("foutputTest Failed.");
 	}
+
+	free(error);
   }
+  
+  return 0;
 }
