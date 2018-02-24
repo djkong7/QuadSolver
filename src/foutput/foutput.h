@@ -1,1 +1,1 @@
-int foutput(char *line);
+int foutput(int errorNumber);

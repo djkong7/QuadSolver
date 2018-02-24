@@ -3,6 +3,12 @@
 #include <math.h>
 #include <stdlib.h>
 #include <string.h>
+#include "../rline/rline.h"
+#include "../validate/validate.h"
+#include "../qsolve/qsolve.h"
+#include "../wline/wline.h"
+#include "../foutput/foutput.h"
+#include "../validate/validate.h"
 
 int main(int argc, char** argv){
 
@@ -14,38 +20,17 @@ int main(int argc, char** argv){
 		int ret = rline(256, &input[0]);
 
 		if (ret == 0) {
-
-			char* splitInput = strtok(input," ");
-			int i = 0;
-			float a, b, c;
-			while(splitInput != NULL && i < 3){
-				if(i==0){
-					a = strtof(splitInput, NULL);
-				} else if (i==1){
-					b = strtof(splitInput, NULL);
-				} else if (i==2){
-					c = strtof(splitInput, NULL);
-				}
-				splitInput = strtok(NULL, " ");
-				i++;
-			}
-
-			if(i == 3){
+			double a,b,c;
+			ret = validate(&input[0], 256, &a, &b, &c);
+			if(ret == 1){
 				float x1, x2;
-
-				ret = validate(&input[0], 256, &a, &b, &c);
-				if(ret == 0){
-					ret = qsolve(a, b, c, &x1, &x2);
-				} else {
-				  	foutput(ret);
-				}
+				ret = qsolve(a, b, c, &x1, &x2);
 			} else {
-				foutput(-3);
+				//validate failed
+				foutput(ret);
 			}
-
-		
-		
 		} else {
+			//rline failed
 			foutput(ret);
 		}
 	}
