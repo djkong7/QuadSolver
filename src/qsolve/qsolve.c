@@ -5,18 +5,15 @@
 #include <string.h>
 
 
-
 int qsolve(double a, double b, double c, double* x1,  double* x2){
 	if (a == 0) {
-		printf("a is 0. No output.\n");
-		return -1;
+		return -5;
 	}
 
 	double desc = powf(b, 2.0) - (4 * a * c);
-		
+
 	if(desc < 0){
-		printf("No output: two complex roots.\n");
-		return -1;
+		return -6;
 	} else if (desc == 0) {
 		printf("One real root with multiplicity two:");
 	} else {
@@ -35,16 +32,11 @@ int qsolve(double a, double b, double c, double* x1,  double* x2){
 		r2 = -sqrt(abs(c / a));
 	}
 
-	if(errno == 0){
-		printf(" No calculation failures.\n");
-		if(desc != 0){
-			printf("r1: %.9g\nr2: %.9g\n", r1, r2);
-		} else {
-			printf("r1: %.9g\n", r1);
-		}
+	if(desc != 0){
+		printf("r1: %.7g\nr2: %.7g\n", r1, r2);
 	} else {
-		printf(" Calculation failures. Cannot guarantee precise answer.\n");
-		return -1;
+		printf("r1: %.7g\n", r1);
 	}
+	
 	return 0;
 }
