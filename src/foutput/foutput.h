@@ -1,1 +1,1 @@
-int foutput(int errorNumber);
+void foutput(int errorNumber);
