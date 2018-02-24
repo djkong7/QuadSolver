@@ -1,11 +1,11 @@
 CC = gcc
 CFlags = -Wall -pedantic -std=c11
 
-run: rlineTest
-	./rlineTest < rlineTest.txt
-
 all: rlineTest.o rline.o
 	${CC} -o rlineTest rlineTest.o rline.o
+
+run: rlineTest
+	./rlineTest < rlineTest.txt
 
 test.o: rline.h rlineTest.c
 	${CC} ${CFlags} -c rlineTest.c

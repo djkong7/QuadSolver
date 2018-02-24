@@ -1,11 +1,11 @@
 CC = gcc
 CFlags = -Wall -pedantic -std=c11
 
-run: foutputTest
-	./foutputTest
-
 all: foutputTest.o foutput.o
 	${CC} -o foutputTest foutputTest.o foutput.o
+
+run: foutputTest
+	./foutputTest
 
 foutputTest.o: foutput.h foutputTest.c
 	${CC} ${CFlags} -c foutputTest.c

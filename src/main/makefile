@@ -1,11 +1,11 @@
 CC = gcc
 CFlags = -Wall -pedantic -std=c11
 
-run: test
-	./test
-
 all: test.o main.o
 	${CC} -o test test.o main.o
+
+run: test
+	./test
 
 test.o: main.h test.c
 	${CC} ${CFlags} -c test.c

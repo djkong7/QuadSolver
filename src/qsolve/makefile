@@ -1,14 +1,14 @@
 CC = gcc
 CFlags = -Wall -pedantic -std=c11
 
-run: test
-	./test
-
 all: test.o qsolve.o
 	${CC} -o test test.o qsolve.o
 
-test.o: qsolve.h test.c
-	${CC} ${CFlags} -c test.c
+run: test
+	./test
+
+test.o: qsolve.h qsolveTest.c
+	${CC} ${CFlags} -c qsolveTest.c
 
 qsolve.o: qsolve.h qsolve.c
 	${CC} ${CFlags} -c qsolve.c
