@@ -5,7 +5,6 @@
 #include "validate.h"
 
 int main() {
-  printf("Test Run\n");
   FILE *f = fopen("validateTest.txt", "r");
   char* lineRead = calloc(3, sizeof(char));
   size_t len = 0;
@@ -23,7 +22,7 @@ int main() {
     validateError = validate(lineRead, n, &a, &b, &c);
 
     if (validateError == -3) {
-      printf("ERROR: Test %d, input %s failed!\n", count, lineRead);
+      printf("ERROR: Test %d failed!\n", count);
     }
     else if(validateError == -7){
       printf("Test lost accuracy\n");

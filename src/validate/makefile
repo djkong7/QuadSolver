@@ -4,11 +4,11 @@ CFlags = -Wall -pedantic -std=c11
 run: test
 	./test
 
-all: test.o validate.o
-	${CC} -o test test.o validate.o
+all: validateTest.o validate.o
+	${CC} -o test validateTest.o validate.o
 
-test.o: validate.h test.c
-	${CC} ${CFlags} -c test.c
+validateTest.o: validate.h validateTest.c
+	${CC} ${CFlags} -c validateTest.c
 
 validate.o: validate.h validate.c
 	${CC} ${CFlags} -c validate.c
