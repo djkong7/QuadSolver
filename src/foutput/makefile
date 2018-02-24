@@ -21,7 +21,7 @@ build: clean foutput.o
 	cp foutput.o ../../build
 
 clean:
-	rm -rf foutputTest *.o core
+	rm -rf foutputTest foutputTest2 *.o core
 
 deploy:
 	cp foutput.c foutput.h ../../deploy
