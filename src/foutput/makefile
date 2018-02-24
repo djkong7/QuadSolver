@@ -10,7 +10,7 @@ all: foutputTest.o foutput.o
 foutputTest.o: foutput.h foutputTest.c
 	${CC} ${CFlags} -c foutputTest.c
 
-foutput.o: foutput.h foutput.c
+foutput.o: foutput.h foutput.c ../wline/wline.c
 	${CC} ${CFlags} -c foutput.c ../wline/wline.c
 
 build: clean foutput.o
