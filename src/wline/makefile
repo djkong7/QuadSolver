@@ -1,14 +1,14 @@
 CC = gcc
 CFlags = -Wall -pedantic -std=c11
 
-all: test.o wline.o
-	${CC} -o test test.o wline.o
+all: wlineTest.o wline.o
+	${CC} -o test wlineTest.o wline.o
 
 run: test
 	./test > testResults.txt
 	diff wlineTest.txt testResults.txt
 
-test.o: wline.h wlineTest.c
+wlineTest.o: wline.h wlineTest.c
 	${CC} ${CFlags} -c wlineTest.c
 
 wline.o: wline.h wline.c
