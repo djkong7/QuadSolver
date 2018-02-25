@@ -10,7 +10,7 @@ int qsolve(double a, double b, double c, double* x1,  double* x2){
 		return -5;
 	}
 
-	double desc = powf(b, 2.0) - (4 * a * c);
+	double desc = pow(b, 2.0) - (4 * a * c);
 
 	if(desc < 0){
 		return -6;
@@ -19,7 +19,7 @@ int qsolve(double a, double b, double c, double* x1,  double* x2){
 	} else {
 		printf("Two real roots:");
 	}
-
+	
 	double r1, r2;
 	if(b < 0){
 		r1 = (-b + sqrt(desc)) / (2 * a);
@@ -28,8 +28,8 @@ int qsolve(double a, double b, double c, double* x1,  double* x2){
 		r1 = (-b - sqrt(desc)) / (2 * a);
 		r2 = (c / (a * r1));
 	} else {
-		r1 = sqrt(abs(c / a));
-		r2 = -sqrt(abs(c / a));
+		r1 = sqrt(fabs(c / a));
+		r2 = -sqrt(fabs(c / a));
 	}
 
 	if(desc != 0){
