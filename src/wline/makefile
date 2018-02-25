@@ -4,7 +4,7 @@ CFlags = -Wall -pedantic -std=c11
 all: wlineTest.o wline.o
 	${CC} -o test wlineTest.o wline.o
 
-run: test
+run: all
 	./test > testResults.txt
 	diff wlineTest.txt testResults.txt
 

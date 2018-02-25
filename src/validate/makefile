@@ -4,7 +4,7 @@ CFlags = -Wall -pedantic -std=c11
 all: validateTest.o validate.o
 	${CC} -o test validateTest.o validate.o
 
-run: test
+run: all
 	./test
 
 validateTest.o: validate.h validateTest.c

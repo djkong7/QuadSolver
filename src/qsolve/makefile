@@ -4,7 +4,7 @@ CFlags = -Wall -pedantic -std=c11
 all: qsolveTest.o qsolve.o
 	${CC} -o test qsolveTest.o qsolve.o -lm
 
-run: test
+run: all
 	./test
 
 qsolveTest.o: qsolve.h qsolveTest.c
