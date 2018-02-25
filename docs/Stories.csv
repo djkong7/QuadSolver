@@ -1,9 +1,9 @@
-Initial Stories Table: ,,,,
+Week 5 Stories Table:,,,,
 Story,Time Estimate,Risk (1-5),Total Time,% Complete
-"Engineer will input A, B, C in command line to start the program.",1hr,2,1,30
-"The engineer will also be able to input A, B, C in scientific notation to start the program.",2hr,3,0.5,20
-The engineers will receive real roots only.,0min,1,0.25,10
-The engineers will be told if double or single solution root.,30min,1,0.25,10
-The engineers will input and receive IEEE single precision floating point numbers.,1hr,2,0.25,10
-The engineers will receive a warning if they input numbers with too many decimal places,30min,1,0,0
-The engineers will receive a warning if the output has been truncated or rounded.,1hr,2,0.5,20
+"Engineer will input A, B, C in command line to start the program.",1hr,2,1,100
+"The engineer will also be able to input A, B, C in scientific notation to start the program.",2hr,3,1.5,100
+The engineers will receive real roots only.,0min,1,1.5,100
+The engineers will be told if double or single solution root.,30min,1,2.5,75
+The engineers will input and receive IEEE single precision floating point numbers.,1hr,2,3.5,70
+The engineers will receive a warning if they input numbers with too many decimal places,30min,1,4.5,0
+The engineers will receive a warning if the output has been truncated or rounded.,1hr,2,5.5,70

@@ -28,8 +28,10 @@ Float spikes (cont),1,3,Danny,1,100,No
 Split spike functions into required files/directories,1,2,John,1,100,No
 ,,,,,,
 Week 5:,,,,,,
-Finish documentation,2,2,Jonah/Matt,2,100,
-Testing rline,1,3,Matt,0.5,100,
-Test validate,2,3,Jonah/John,3,100,YES
-Test wline,1,1,Jonah,1,100,YES
-Makefile in SRC,2,1,Jonah/John,1,75,
+Finish documentation,2,2,Jonah/Matt,2,100,No
+Testing rline,1,3,Matt,0.5,100,Yes
+Test validate,2,3,Jonah/John,3,100,Yes
+Test wline,1,1,Jonah,1,100,Yes
+Makefile in SRC,2,1,Jonah/John,1,75,Yes
+Test qsolve,1.5,2,John,1,100,No
+Test foutput,2,2,Matt,1.5,100,Yes
