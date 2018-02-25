@@ -23,11 +23,11 @@ int main() {
     validateError = validate(lineRead, n, &a, &b, &c);
 
     if (validateError == -3) {
-      printf("ERROR: Test %d failed. Wrong amount of numbers.\n", count);
+      printf("Validate ERROR: Test %d failed. Wrong amount of numbers.\n", count);
     } else if (validateError == -7){
-      printf("ERROR: Test %d failed. Input cannot fit in double.\n");
+      printf("Validate ERROR: Test %d failed. Input cannot fit in double.\n", count);
     } else if(validateError == -10){
-      printf("Test %d lost accuracy\n", count);
+      printf("Validate ERROR: Test %d lost accuracy\n", count);
     }
 
     count++;

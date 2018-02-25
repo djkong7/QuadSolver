@@ -4,7 +4,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include "validate.h"
-#include "../wline/wline.h"
 
 int validate(char *line, int n, double *a, double *b, double *c){
 	for (int i = 0; line[i] != '\0' && line[i] != '\n'; i++) {
@@ -40,19 +39,18 @@ int validate(char *line, int n, double *a, double *b, double *c){
 		i++;
 	}
 
-	if(issubnormal(*a)||issubnormal(*b)||issubnormal(*c)){
-		printf("Denormalized input.\n");
-	}
-
 	//Check for lost accuracy
 	float aFloat = (float)*a;
 	float bFloat = (float)*b;
 	float cFloat = (float)*c;
 	
 	int accLost = 0;
-
 	//The floats are not equal to their double equivalents
 	if((*a != (double)aFloat) || (*b != (double)bFloat) || (*c != (double)cFloat)){
+		accLost = 1;
+	}
+
+	if(fpclassify(*a)==FP_SUBNORMAL||fpclassify(*b)==FP_SUBNORMAL||fpclassify(*c)==FP_SUBNORMAL){
 		accLost = 1;
 	}
 
@@ -60,13 +58,10 @@ int validate(char *line, int n, double *a, double *b, double *c){
 	if(i==3 && accLost == 0){
 		//all good
 		return 0;
-	}
-	else if(i==3 && accLost == 1){
+	} else if(i==3 && accLost == 1){
 		//Accuracy was lost
-		wline("Input cannot fit in float. Accuracy will be lost.\n");
 		return -10;
-	}
-	else {
+	} else {
 		//too many/too few numbers
 		return -3;
 	}
