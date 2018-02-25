@@ -64,7 +64,7 @@ int validate(char *line, int n, double *a, double *b, double *c){
 	else if(i==3 && accLost == 1){
 		//Accuracy was lost
 		wline("Input cannot fit in float. Accuracy will be lost.\n");
-		return 0;
+		return -10;
 	}
 	else {
 		//too many/too few numbers
