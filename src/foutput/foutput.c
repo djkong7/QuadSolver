@@ -43,5 +43,9 @@ void foutput(int errorNumber){
 				perror("Error printing failed!");
 			}
 			exit(0);
+		case -10:
+			if (wline("Input lost precision. Denormalized or too big for float.\n") != 0){
+				perror("Error printing failed!");
+			}
 	}
 }
