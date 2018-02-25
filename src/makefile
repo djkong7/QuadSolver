@@ -9,7 +9,6 @@ build:
 	(cd foutput; make build)
 	(cd main; make build)
 	(cd qsolve; make build)
-	(cd rline; make build)
 	(cd wline; make build)
 	(cd validate; make build)
 	(cd ../build; make)
@@ -22,3 +21,12 @@ test:
 
 clean:
 	rm -rf quadSolver *.o core
+
+cleanAll:
+	(make clean)
+	(cd rline; make clean)
+	(cd qsolve; make clean)
+	(cd wline; make clean)
+	(cd validate; make clean)
+	(cd foutput; make clean)
+	(cd main; make clean)
