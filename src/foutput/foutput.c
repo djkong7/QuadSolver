@@ -38,5 +38,10 @@ void foutput(int errorNumber){
 			    perror("Error printing failed!");
 			}
 			exit(0);
+		case -7:
+			if (wline("Input cannot cannot fit into double. Calculation failed.\n") != 0){
+				perror("Error printing failed!");
+			}
+			exit(0);
 	}
 }

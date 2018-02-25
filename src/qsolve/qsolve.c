@@ -4,22 +4,25 @@
 #include <stdlib.h>
 #include <string.h>
 #include "qsolve.h"
+#include "../wline/wline.h"
 
 int qsolve(double a, double b, double c, double* x1,  double* x2){
 	if (a == 0) {
+		//cannot divide by 0
 		return -5;
 	}
 
 	double desc = pow(b, 2.0) - (4 * a * c);
 
 	if(desc < 0){
+		//2 imaginary roots
 		return -6;
 	} else if (desc == 0) {
-		printf("One real root with multiplicity two:");
+		wline("One real root with multiplicity two:");
 	} else {
-		printf("Two real roots:");
+		wline("Two real roots:");
 	}
-	
+
 	double r1, r2;
 	if(b < 0){
 		r1 = (-b + sqrt(desc)) / (2 * a);

@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "validate.h"
+#include "../wline/wline.h"
 
 int validate(char *line, int n, double *a, double *b, double *c){
 	for (int i = 0; line[i] != '\0' && line[i] != '\n'; i++) {
@@ -21,26 +22,37 @@ int validate(char *line, int n, double *a, double *b, double *c){
 	char* splitInput = strtok(line," ");
 	int i = 0;
 	while(splitInput != NULL){
+		char* endptr;
 		if(i==0){
-			*a = strtod(splitInput, NULL);
+			*a = strtod(splitInput, &endptr);
 		} else if (i==1){
-			*b = strtod(splitInput, NULL);
+			*b = strtod(splitInput, &endptr);
 		} else if (i==2){
-			*c = strtod(splitInput, NULL);
+			*c = strtod(splitInput, &endptr);
 		}
+
+		if(splitInput == endptr || errno){
+			//invalid double input
+			return -7;
+		}
+
 		splitInput = strtok(NULL, " ");
 		i++;
 	}
 
-	//Check for lost accuracy
-	float aFloat = *a;
-	float bFloat = *b;
-	float cFloat = *c;
+	if(issubnormal(*a)||issubnormal(*b)||issubnormal(*c)){
+		printf("Denormalized input.\n");
+	}
 
+	//Check for lost accuracy
+	float aFloat = (float)*a;
+	float bFloat = (float)*b;
+	float cFloat = (float)*c;
+	
 	int accLost = 0;
 
 	//The floats are not equal to their double equivalents
-	if(*a != (double) aFloat || *b != (double) bFloat || *c != (double) cFloat){
+	if((*a != (double)aFloat) || (*b != (double)bFloat) || (*c != (double)cFloat)){
 		accLost = 1;
 	}
 
@@ -51,7 +63,8 @@ int validate(char *line, int n, double *a, double *b, double *c){
 	}
 	else if(i==3 && accLost == 1){
 		//Accuracy was lost
-		return -7;
+		wline("Input cannot fit in float. Accuracy will be lost.\n");
+		return 0;
 	}
 	else {
 		//too many/too few numbers

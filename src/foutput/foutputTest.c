@@ -8,7 +8,7 @@
 #include "foutput.h"
 
 int main() {
-  for (int i = -1; i > -7; i--) {
+  for (int i = -1; i > -8; i--) {
 	int pid = fork();
 	if (pid == 0) {
 		foutput(i);
