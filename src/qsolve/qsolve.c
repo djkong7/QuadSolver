@@ -36,8 +36,12 @@ int qsolve(double a, double b, double c, double* x1,  double* x2){
 	}
 
 	if(desc != 0){
+		*x1 = r1;
+		*x2 = r2;
 		printf("\nr1: %.7g\nr2: %.7g\n", r1, r2);
 	} else {
+		*x1 = r1;
+		*x2 = 0;
 		printf("\nr1: %.7g\n", r1);
 	}
 	
