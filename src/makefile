@@ -14,6 +14,7 @@ build:
 	(cd ../build; make)
 
 test:
+	(cd foutput; make run)
 	(cd rline; make run)
 	(cd qsolve; make run)
 	(cd wline; make run)
