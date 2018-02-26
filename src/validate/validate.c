@@ -21,7 +21,7 @@ int validate(char *line, int n, double *a, double *b, double *c){
 	char* splitInput = strtok(line," ");
 	int i = 0;
 	while(splitInput != NULL){
-		char* endptr;
+		char* endptr = NULL;
 		if(i==0){
 			*a = strtod(splitInput, &endptr);
 		} else if (i==1){
@@ -43,7 +43,7 @@ int validate(char *line, int n, double *a, double *b, double *c){
 	float aFloat = (float)*a;
 	float bFloat = (float)*b;
 	float cFloat = (float)*c;
-	
+
 	int accLost = 0;
 	//The floats are not equal to their double equivalents
 	if((*a != (double)aFloat) || (*b != (double)bFloat) || (*c != (double)cFloat)){
