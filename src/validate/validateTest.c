@@ -6,7 +6,7 @@
 #include "validate.h"
 
 int main() {
-  FILE *f = fopen("validateTest.txt", "r");
+  FILE *f = fopen("validateInput.txt", "r");
   char* lineRead = calloc(3, sizeof(char));
   size_t len = 0;
   ssize_t read;
