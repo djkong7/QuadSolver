@@ -5,7 +5,8 @@ all: validateTest.o validate.o
 	${CC} -o test validateTest.o validate.o
 
 run: all
-	./test
+	./test > validateResult.txt
+	diff validateResult.txt testOutcome.txt
 
 validateTest.o: validate.h validateTest.c
 	${CC} ${CFlags} -c validateTest.c

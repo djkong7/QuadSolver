@@ -1,0 +1,4 @@
+Validate ERROR: Test 5 lost accuracy
+Validate ERROR: Test 6 lost accuracy
+Validate ERROR: Test 7 failed. Wrong amount of numbers.
+Validate ERROR: Test 8 failed. Wrong amount of numbers.

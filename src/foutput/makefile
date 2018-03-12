@@ -25,3 +25,7 @@ clean:
 
 deploy:
 	cp foutput.c foutput.h ../../deploy
+
+test: foutputTest.o foutputTest2.o foutput.o wline.o
+	@(${CC} -o foutputTest foutputTest.o foutput.o wline.o)
+	@(${CC} -o foutputTest2 foutputTest2.o)
