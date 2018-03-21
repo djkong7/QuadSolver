@@ -1,0 +1,1 @@
+Unit tests for the Quad Solver program will be expected to cover edge cases, normal use, and bad input with expected error handling.

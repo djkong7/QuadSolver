@@ -1,0 +1,6 @@
+Automation will be done with Make.
+
+The make file will allow the user to compile, run, and test the individual pieces of the Quad Solver program.
+
+The make file will also allow for System testing, building (copying files to the build directory), and cleaning
+individual directories or the entire src directory.
